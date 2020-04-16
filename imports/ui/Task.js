@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Meteor } from 'meteor/meteor';
 import classnames from 'classnames';
 import ProgressBar from 'react-bootstrap/ProgressBar';
+import Button from 'react-bootstrap/Button';
 
 import { Tasks } from '../api/tasks.js';
 
@@ -42,9 +43,9 @@ export default class Task extends Component {
                 />
 
                 { this.props.showPrivateButton ? (
-                        <button className="toggle-private" onClick={this.togglePrivate.bind(this)}>
+                        <Button style={{margin: 7}} variant="secondary" size="sm" onClick={this.togglePrivate.bind(this)}>
                             { this.props.task.private ? 'Private' : 'Public' }
-                        </button>
+                        </Button>
                     ) : ''}
 
                 <span className="text">
