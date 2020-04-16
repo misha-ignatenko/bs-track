@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { Meteor } from 'meteor/meteor';
 import { withTracker } from 'meteor/react-meteor-data';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { Tasks } from '../api/tasks.js';
 

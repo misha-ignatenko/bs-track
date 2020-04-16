@@ -33,6 +33,7 @@ Meteor.methods({
             source,
             whenPredicted,
             createdAt: new Date(),
+            progress: Math.random() * 100,
             owner: this.userId,
             username: Meteor.users.findOne(this.userId).username,
         });

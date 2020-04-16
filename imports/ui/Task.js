@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Meteor } from 'meteor/meteor';
 import classnames from 'classnames';
+import ProgressBar from 'react-bootstrap/ProgressBar';
 
 import { Tasks } from '../api/tasks.js';
 
@@ -49,6 +50,8 @@ export default class Task extends Component {
                 <span className="text">
                     <strong>{this.props.task.source}</strong> on {this.props.task.whenPredicted}: {this.props.task.text}
                 </span>
+
+                <ProgressBar animated variant={this.props.task.checked ? "danger" : ''} now={this.props.task.checked ? 1 : this.props.task.progress} />
             </li>
         );
     }
